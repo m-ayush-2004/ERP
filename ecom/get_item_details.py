@@ -1,4 +1,6 @@
 from erpnext.stock.get_item_details import *
+import frappe
+
 @frappe.whitelist()
 def get_item_details(args, doc=None, for_validate=False, overwrite_warehouse=True):
 	"""
@@ -107,15 +109,5 @@ def get_item_details(args, doc=None, for_validate=False, overwrite_warehouse=Tru
 		out.amount = flt(args.qty) * flt(out.rate)
 
 	out = remove_standard_fields(out)
+	out['actual_qty'] = out['projected_qty']
 	return out
-
-
-@frappe.whitelist()
-def get_projected_qty(item_row):
-	x = json.loads(item_row)
-	return item_row
-	return {
-		"projected_qty": frappe.db.get_value(
-			"Bin", {"item_code": x["item_code"], "warehouse": x["warehouse"]}, "projected_qty"
-		)
-	}

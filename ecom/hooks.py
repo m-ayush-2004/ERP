@@ -23,7 +23,7 @@ fixtures = [
     }
 ]
 
-app_include_js = "public/js/sales_order.js"
+# app_include_js = "public/js/sales_order.js"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/ecom/css/ecom.css"
 # app_include_js = "/assets/ecom/js/ecom.js"
@@ -36,14 +36,14 @@ app_include_js = "public/js/sales_order.js"
 # website_theme_scss = "ecom/public/scss/website"
 
 # include js, css files in header of web form
-# webform_include_js = {"doctype": "public/js/doctype.js"}
+# webform_include_js = {"Sales Order": "public/js/sales_order.js"}
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_list_js = {"Sales Order": "public/js/sales_order.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -181,9 +181,9 @@ doc_events = {
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "ecom.event.get_events"
-# }
+override_whitelisted_methods = {
+	"erpnext.stock.get_item_details.get_item_details": "ecom.get_item_details.get_item_details"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
