@@ -9,7 +9,21 @@ app_license = "MIT"
 
 # Includes in <head>
 # ------------------
+fixtures = [
+     {
+        "dt": "Custom Field", "filters":
+        [
+            [
+                "name", "in", [
+                "Sales Order",
+                "Quotation"
+                ]
+            ]
+        ]
+    }
+]
 
+app_include_js = "public/js/sales_order.js"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/ecom/css/ecom.css"
 # app_include_js = "/assets/ecom/js/ecom.js"
@@ -29,9 +43,6 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {
-    "Sales Order" : "public/js/sales_order.js"
-    }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -135,13 +146,11 @@ fixtures = [
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Quotation": {
+		"on_save": ""
+	}
+}
 
 # Scheduled Tasks
 # ---------------

@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ass1-{YY}-{DD}-{MM}.{###}",
+ "creation": "2023-10-19 12:30:52.860573",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "firstname",
+  "lastname",
+  "fname",
+  "child_tab",
+  "check"
+ ],
+ "fields": [
+  {
+   "fieldname": "firstname",
+   "fieldtype": "Data",
+   "label": "firstname"
+  },
+  {
+   "fieldname": "lastname",
+   "fieldtype": "Data",
+   "label": "lastname"
+  },
+  {
+   "fieldname": "fname",
+   "fieldtype": "Data",
+   "label": "fname"
+  },
+  {
+   "fieldname": "child_tab",
+   "fieldtype": "Table",
+   "label": "child_tab",
+   "options": "hobbies"
+  },
+  {
+   "default": "0",
+   "fieldname": "check",
+   "fieldtype": "Check",
+   "label": "check"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-19 13:00:51.221116",
+ "modified_by": "Administrator",
+ "module": "Ecom",
+ "name": "ass1",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
