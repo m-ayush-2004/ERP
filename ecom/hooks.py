@@ -139,18 +139,18 @@ fixtures = [
 # Override standard doctype classes
 
 # override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
+# 	"Lead": "ecom.lead.CustomLead"
 # }
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-	"Quotation": {
-		"on_save": ""
-	}
-}
+# doc_events = {
+# 	"Lead": {
+# 		"set_full_name": "ecom.lead.CustomLead.set_full_name"
+# 	}
+# }
 
 # Scheduled Tasks
 # ---------------
